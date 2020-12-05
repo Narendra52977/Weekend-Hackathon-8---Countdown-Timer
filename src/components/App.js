@@ -8,8 +8,10 @@ const App = () => {
     if (e.keyCode !== 13) {
       return;
     }
-    if (isNaN(e.target.value) || parseInt(e.target.value) < 0) return;
-    setTimer(e.target.value);
+       let timeCount = Math.floor(event.target.value);
+    if (typeof timeCount === "number" && timeCount >= 0) {
+      setTime(timeCount);
+    } else setTime(0);
   };
   useEffect(() => {
     const id = setInterval(() => {
