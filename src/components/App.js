@@ -10,8 +10,8 @@ const App = () => {
     }
        let timeCount = Math.floor(event.target.value);
     if (typeof timeCount === "number" && timeCount >= 0) {
-      setTime(timeCount);
-    } else setTime(0);
+      setTimer(timeCount);
+    } else setTimer(0);
   };
   useEffect(() => {
     const id = setInterval(() => {
